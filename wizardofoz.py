@@ -68,4 +68,15 @@ while True:
 	choice = wait_key()
 	keyItem = keysIndex.index(choice) 
 	#need an if statement here to check if the keypress is in the range
-	os.system("say -v Samantha \"" + lines[keyItem][1] + "\"")
+	item = lines[keyItem][1]
+	if item.startswith('[') and item.endswith(']'):
+		# lines in [] are audio file names, played synchronously.
+		item = item[1:-1]
+		os.system("afplay '" + item + "'")
+	elif item.startswith('{') and item.endswith('}'):
+		# lines in [] are audio file names, played asynchronously.
+		item = item[1:-1]
+		os.system("afplay '" + item + "' &") 
+	else:
+		# All other lines are spoken (synchronously).
+		os.system("say -v Samantha \"" + item + "\"")

@@ -13,8 +13,8 @@ Maybe I'll go there. What do you think of my voice?
 OK, that's enough, bye!
 What do you like?
 Go suck an egg.
-are you sick?
 Do you wear glasses?
-AAAhhhhhhh
 What else can I say?
 Wait. Oh my God. Is that rude?
+[audio/iPhone Ringtone.mp3]
+{audio/iPhone Ringtone.mp3}
